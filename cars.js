@@ -47,7 +47,7 @@
 const hSelector = document.querySelectorAll("h3");
 const h3SizeClick = (elem) => 
 hSelector.forEach(element => { 
-    element.style.fontSize ="5em";
+    element.style.fontSize ="50px";
 });
 const changeSize = document.querySelector("#btnSize");
 changeSize.addEventListener("click",h3SizeClick);
@@ -61,6 +61,28 @@ changeFont.addEventListener("click",pFontClick);
 
 //Highlight a paragraph with back-ground #btnHighlight #p1
 const p2Selector = document.querySelector("#p2");
-const p2highlight = (elem) => p2Selector.style.backgroundColor= "yellow";
+const p2highlight = (elem) => p2Selector.style.backgroundColor= "#ec95ec";
 const highlight = document.querySelector("#btnHighlight");
 highlight.addEventListener("click",p2highlight);
+
+//Hide an Image
+const imgSelector = document.querySelector("#img");
+const hideImg = (elem) => imgSelector.style.visibility= "hidden";
+const imgBtn = document.querySelector("#btnHideImg");
+imgBtn.addEventListener("click",hideImg);
+
+//#btnAlternate .img1 .img2
+const img1 = document.querySelector("#img1");
+const img2 = document.querySelector("#img2");
+const img1Src=img1.src;
+const img2Src=img2.src;
+const alternateImgs = (elem) => {
+ img1.src=img2Src;
+ img2.src = img1Src;
+}
+const alternatsBtn = document.querySelector("#btnAlternate");
+alternatsBtn.addEventListener("click",alternateImgs);
+
+
+//Task2 par2
+
