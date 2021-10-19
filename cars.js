@@ -1,26 +1,28 @@
 // constract function
-class cars {
+class Cars {
+  constructor(make, model, colour, image, registrationNumber, price) {
+    (this.make = make),
+      (this.model = model),
+      (this.colour = colour),
+      (this.image = image),
+      (this.registrationNumber = registrationNumber),
+      (this.price = price);
+  }
+  editPrice(newPrice) {
+    return (this.price = newPrice * 5);
+  }
+  showAll() {
+    return ` Make Date : ${this.make} ,Model : ${this.model}, Colour : ${this.colour}, Image : ${this.image}, Registration Number : ${this.registrationNumber} ,price :${this.price}`;
+  }
+}
 
+const class1 = new Cars("2019", "BMW", "Red", "htpp://#", "3928203", "100000");
+const class2 = new Cars("2019", "BMW", "Red", "htpp://#", "3928203", "100000");
+const class3 = new Cars("2019", "BMW", "Red", "htpp://#", "3928203", "100000");
+const class4 = new Cars("2019", "BMW", "Red", "htpp://#", "3928203", "100000");
+const class5 = new Cars("2019", "BMW", "Red", "htpp://#", "3928203", "100000");
 
-constructor() {
-    this.make= make, 
-    this.model= model, 
-    this.colour=colour, 
-    this.image=image, 
-    this.registrationNumber=registrationNumber,
-    this.price=price;}
-    editPrice(newPrice) {
-this.price = newPrice*5;
-     }
-     showAll() {
-return ` Make Date ${this.make} ,Model ${this.model}, Colour ${this.colour}, Image ${this.image}, Registration Number${this.registrationNumber} ,price of 2021 ${this.newPrice(this.price)}`;
-     }
-
-};
-
-let bmw = class cars("2019","BMW","Red", "url", "3928203" ,"30000");
-cars.showAll();
+class1.editPrice("20");
+class1.showAll();
 //Each car object should also include a editPrice(newPrice) method.
 // this method should change the price of the car
-
-
