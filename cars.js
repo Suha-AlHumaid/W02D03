@@ -84,5 +84,58 @@ const alternatsBtn = document.querySelector("#btnAlternate");
 alternatsBtn.addEventListener("click",alternateImgs);
 
 
-//Task2 par2
+//Task2 part 2
+
+document.getElementById("beforeImg").addEventListener("mouseover", mouseOver);
+document.getElementById("beforeImg").addEventListener("mouseout", mouseOut);
+
+function mouseOut() {
+  document.getElementById("beforeImg").src= "https://cdn.pixabay.com/photo/2015/04/19/08/33/flower-729512__340.jpg";
+}
+
+function mouseOver() {
+  document.getElementById("beforeImg").src= "https://arga-mag.com/file/img/2020/12/Beautiful-text-about-flowers.jpg";
+}
+
+//3
+// function showAlert() {
+//     alert("This is the alert!")
+//   }
+
+//4
+//Create an alert on the page when a user enters data into a input
+
+const inputText= document.getElementById("input1");
+inputText.addEventListener("input", myFunction);
+function myFunction() {
+   if (inputText.value){alert("Thank you!");}
+  
+}
+
+//5
+//Create an alert to let the user know when the page has loaded
+
+window.onload = function(){//window.addEventListener('load',function(){...}); (for Netscape) and window.attachEvent('onload',function(){...}); (for IE and Opera) also work
+    // alert(`Page loded!`);
+}
+//Highlight all paragraphs when the mouse moves over them (then revert back once it has moved past them).
+
+const p2 = document.querySelector("#text");
+
+const pHighlight= (elem) => 
+p2.style.backgroundColor= "yellow";
+
+const pOriginal= (elem) => 
+p2.style.backgroundColor= "white";
+
+p2.addEventListener("mouseover",pHighlight);
+p2.addEventListener("mouseout", pOriginal);
+const c = document.querySelector("#p2");
+const cHighlight= (elem) => 
+c.style.backgroundColor= "yellow";
+
+const cOriginal= (elem) => 
+c.style.backgroundColor= "white";
+c.addEventListener("mouseover",cHighlight);
+c.addEventListener("mouseout", cOriginal);
 
